@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 214, 214, 214),
+                color: Color.fromARGB(255, 255, 255, 255),
                 boxShadow: const [
                   BoxShadow(
                     color: Colors.grey,
@@ -67,42 +67,63 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 7),
+            const SizedBox(height: 5),
             Center(
               child: Image.asset(
                 'assets/images/sismoslab2.png',
-                width: 550,
-                height: 548,
+                width: 555,
+                height: 550,
               ),
             ),
           ],
         ),
         bottomNavigationBar: BottomAppBar(
-          color: const Color.fromARGB(255, 214, 214, 214),
+          color: Color.fromARGB(255, 255, 255, 255),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TextButton(
+              IconButton(
                 onPressed: () {},
-                child: const Text(
-                  'Sismos',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.orange),
+                icon: Row(
+                  children: [
+                    Icon(Icons.location_on), 
+                    const SizedBox(width: 5),
+                    Text(
+                      'Sismos',
+                      style: TextStyle(color: Colors.orange),
+                    ),
+                  ],
                 ),
+                color: Colors.orange,
               ),
-              TextButton(
+              IconButton(
                 onPressed: () {},
-                child: const Text(
-                  '¿Lo sentiste?',
-                  style: TextStyle(color: Colors.orange),
+                icon: Row(
+                  children: [
+                    Icon(Icons
+                        .feedback), 
+                    const SizedBox(width: 5),
+                    Text(
+                      '¿Lo sentiste?',
+                      style: TextStyle(color: Colors.orange),
+                    ),
+                  ],
                 ),
+                color: Colors.orange,
               ),
-              TextButton(
+              IconButton(
                 onPressed: () {},
-                child: const Text(
-                  'Más',
-                  style: TextStyle(color: Colors.orange),
+                icon: Row(
+                  children: [
+                    Icon(Icons.more_horiz), 
+                    const SizedBox(width: 5),
+                    Text(
+                      'Más',
+                      style: TextStyle(color: Colors.orange),
+                    ),
+                  ],
                 ),
+                color: Colors.orange,
               ),
             ],
           ),
